@@ -26,6 +26,7 @@ modules:
     requires:
       - name: UI5CAPM-db
       - name: UI5CAPM-destination
+      - name: DemoCAPMApp-xsuaa
 
   - name: UI5CAPM-db-deployer
     type: hdb
@@ -67,3 +68,19 @@ resources:
     parameters:
       service: destination
       service-plan: lite
+  - name: DemoCAPMApp-xsuaa
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: xsuaa
+      service-plan: application
+      config:
+        xsappname: DemoCAPMApp-xsapp
+        tenant-mode: dedicated
+        scopes:
+          - name: "$XSAPPNAME.Viewer"
+            description: Viewer
+        role-templates:
+          - name: Viewer
+            description: Viewer role
+            scope-references:
+              - "$XSAPPNAME.Viewer"

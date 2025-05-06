@@ -16,6 +16,8 @@ general:
 
 ### Step-specific configuration
 steps:
+  npmExecuteScripts: # to do not execute script
+    runScripts: []
   mavenExecute:
     dockerImage: devxci/mbtci:1.0.14
 
@@ -24,6 +26,14 @@ steps:
 
 ### Stage-specific configuration
 stages:
+  build:
+    npmInstall: true
+    npmScript: build
+  deploy:
+    cfApiEndpoint: https://api.cf.us10-001.hana.ondemand.com
+    cfOrg: f86034d7-b0fe-49c7-8c42-3b043a384f18
+    cfSpace: 32802711-1e00-4aee-8ab6-b158273793f8
+    cfCredentialsId: cf
   'Confirm':
     manualConfirmation: false
 

@@ -16,14 +16,14 @@
     "@sap/cds-dk": "^8"
   },
   "scripts": {
-    "start": "cds-serve"
+    "start": "cds-serve",
+    "test": "echo \"No tests defined\" && exit 0"
   },
   "cds": {
-    "sql": {
-      "native_hana_associations": false
-    },
     "requires": {
-      "destinations": true
+      "destinations": true,
+      "auth":"mocked",
+      "db":"hana"
     }
   }
 }

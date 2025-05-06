@@ -1,0 +1,20 @@
+{
+    "xsappname": "UI5CAPM-xsapp",
+    "tenant-mode": "dedicated",
+    "scopes": [
+      {
+        "name": "$XSAPPNAME.Viewer",
+        "description": "Viewer"
+      }
+    ],
+    "role-templates": [
+      {
+        "name": "Viewer",
+        "description": "Viewer",
+        "scope-references": [
+          "$XSAPPNAME.Viewer"
+        ]
+      }
+    ]
+  }
+  
