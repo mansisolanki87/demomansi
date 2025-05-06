@@ -84,3 +84,4 @@ resources:
             description: Viewer role
             scope-references:
               - "$XSAPPNAME.Viewer"
+
