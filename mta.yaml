@@ -23,14 +23,14 @@ modules:
     requires:
       - name: html5-app-runtime
 
-  - name: approuter
-    type: approuter.nodejs
-    path: approuter
-    requires:
-      - name: DemoCAPMApp-xsuaa
-      - name: html5-app-runtime
-      - name: html5-service
-      - name: UI5CAPM-destination
+  # - name: approuter
+  #   type: approuter.nodejs
+  #   path: approuter
+  #   requires:
+  #     - name: DemoCAPMApp-xsuaa
+  #     - name: html5-app-runtime
+  #     - name: html5-service
+  #     - name: UI5CAPM-destination
 
   - name: UI5CAPM-srv
     type: nodejs
