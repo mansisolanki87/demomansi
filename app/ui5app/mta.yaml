@@ -17,6 +17,7 @@ modules:
       - ui5app.zip
       name: ui5app
       target-path: resources/
+
 - name: ui5app
   type: html5
   path: .
@@ -28,12 +29,14 @@ modules:
     - npm run build:cf
     supported-platforms: []
 resources:
+
 - name: ui5app-repo-host
   type: org.cloudfoundry.managed-service
   parameters:
     service: html5-apps-repo
     service-name: ui5app-html5-service
     service-plan: app-host
+    
 - name: ui5app-destination-service
   type: org.cloudfoundry.managed-service
   parameters:

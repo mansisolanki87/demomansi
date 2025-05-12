@@ -24,6 +24,9 @@
       "destinations": true,
       "auth":"mocked",
       "db":"hana"
+    },
+    "fiori":{
+      "preview":true
     }
   }
 }

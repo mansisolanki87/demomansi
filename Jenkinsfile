@@ -16,7 +16,7 @@ pipeline {
 
     environment {
         MTA_PATH = "${WORKSPACE}"
-        MTAR_NAME = "UI%CAPM.mtar"
+        MTAR_NAME = "UI5CAPM.mtar"
         CF_API_ENDPOINT = "https://api.cf.us10-001.hana.ondemand.com"
         CF_ORG = "f86034d7-b0fe-49c7-8c42-3b043a384f18"
         CF_SPACE = "32802711-1e00-4aee-8ab6-b158273793f8"
